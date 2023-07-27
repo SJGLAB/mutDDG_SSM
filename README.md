@@ -9,7 +9,7 @@ Thermostability is a fundamental property of proteins to maintain their biologic
 *run*
 **python 10fold_predict.py**
 
-## To get the result on a example:
+## To get the result on an example:
 *run*
 **python predict_single.py**
 
