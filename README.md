@@ -6,7 +6,6 @@
 - [System_Requirements](#System_Requirements)
 - [Installation_Guide](#Installation_Guide)
 - [Usage_and_Demo](#Usage_and_Demo)
-- [Instructions_for_use](#Instructions_for_use)
 ****
 ## Overview
 Repository for the application of mutDDG-SSM.
