@@ -14,7 +14,7 @@ import joblib
 
 sdir = '3213_nor_6144'
 name = '3213raw'
-test_name = 'S203'
+test_name = 'sym'
 
 dir = './' + sdir + '/' + name + '/'
 if not os.path.exists('result/' + sdir):
@@ -64,7 +64,7 @@ print('PCC direct:', pcc_d)
 if test_name == 'sym':
     pred_ave_r = np.average(np.array(pred_list_r), axis=0)
     pcc_r = pearsonr(pred_ave_r, sym_Y2)[0]
-    print('PCC reverse:', pcc_r)
+    print('PCC inverse:', pcc_r)
 if test_name != 'sym':
     with open('result/' + sdir + '/' + name + test_name + '_result_detail.csv', 'w') as f:
         f.write('y,pred\n')

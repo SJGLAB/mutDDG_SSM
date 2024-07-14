@@ -94,13 +94,13 @@ def gen_fea(wildtypefile, muttypefile, mutinfo):
     try:
         A, E, Ea, _m = gen_graph_data(wildtypefile, mutinfo, 3)
         A_m, E_m, Ea_m, _mm = gen_graph_data(muttypefile, mutinfo, 3)
-        A, E, Ea = A.to('cuda'), E.to('cuda'), Ea.to('cuda')
-        A_m, E_m, Ea_m = A_m.to('cuda'), E_m.to('cuda'), Ea_m.to('cuda')
+        # A, E, Ea = A.to('cuda'), E.to('cuda'), Ea.to('cuda')
+        # A_m, E_m, Ea_m = A_m.to('cuda'), E_m.to('cuda'), Ea_m.to('cuda')
         # print(True)
         model = GeometricEncoder(256)
         gnnfile = 'modeldir_regression/regression_Gturb_msd4_nor.model'  #######################
-        model.load_state_dict(torch.load(gnnfile))
-        model.cuda()
+        model.load_state_dict(torch.load(gnnfile,map_location='cpu'))
+        # model.cuda()
         with torch.no_grad():
             fea = model.gen_features(A, E, Ea, A_m, E_m, Ea_m)
             fea = fea.cpu().numpy().flatten()
