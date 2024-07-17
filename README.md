@@ -76,7 +76,7 @@ python3 predict_single.py
 ```
 
 ## Contact Us
-If you have any questions in using mutDDG-SSM, [contact us](lss2995404413@163.com)
+If you have any questions in using mutDDG-SSM, [contact us](Email:lss2995404413@163.com)
 
 
 
